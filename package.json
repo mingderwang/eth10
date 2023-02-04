@@ -1,0 +1,16 @@
+{
+  "name": "@muzamint/eth10",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "author": "Ming-der Wang",
+  "license": "MIT OR ISC",
+  "scripts": {
+    "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish --tag alpha",
+    "release": "standard-version && git push --follow-tags origin main && npm publish",
+    "release:dry-run": "standard-version --dry-run"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
