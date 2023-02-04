@@ -1,6 +1,6 @@
 {
   "name": "@muzamint/eth10",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "Eth10 Protocol",
   "main": "index.js",
   "author": "Ming-der Wang <mingderwang@gmail.com>",
