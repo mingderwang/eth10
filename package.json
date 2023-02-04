@@ -23,6 +23,7 @@
   "keywords": [],
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@web/dev-server-esbuild": "^0.3.3",
     "@web/test-runner": "^0.15.0",
     "concurrently": "^7.6.0",
