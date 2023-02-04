@@ -1,6 +1,6 @@
 {
   "name": "@muzamint/eth10",
-  "version": "0.0.1-alpha.9",
+  "version": "0.0.1-alpha.10",
   "description": "Eth10 Protocol",
   "main": "index.js",
   "author": "Ming-der Wang <mingderwang@gmail.com>",
@@ -41,5 +41,8 @@
     "dist",
     "src"
   ],
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "yargs": "^17.6.2"
+  }
 }
