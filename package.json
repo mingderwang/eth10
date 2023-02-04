@@ -1,10 +1,13 @@
 {
   "name": "@muzamint/eth10",
-  "version": "0.0.1-alpha.8",
+  "version": "0.0.1-alpha.9",
   "description": "Eth10 Protocol",
   "main": "index.js",
   "author": "Ming-der Wang <mingderwang@gmail.com>",
   "license": "MIT OR ISC",
+  "bin": {
+    "eth10": "src/cli.js"
+  },
   "scripts": {
     "build": "rimraf dist && tsc && rollup -c rollup.config.js",
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish --tag alpha --access public",
@@ -24,9 +27,13 @@
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.27",
     "@web/dev-server-esbuild": "^0.3.3",
     "@web/test-runner": "^0.15.0",
     "concurrently": "^7.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
     "standard-version": "^9.5.0",
     "typescript": "^4.9.5"
   },
