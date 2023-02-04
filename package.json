@@ -1,6 +1,6 @@
 {
   "name": "@muzamint/eth10",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-alpha.7",
   "description": "Eth10 Protocol",
   "main": "index.js",
   "author": "Ming-der Wang <mingderwang@gmail.com>",
@@ -10,7 +10,7 @@
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish --tag alpha --access public",
     "release": "standard-version && git push --follow-tags origin main && npm publish --access public",
     "release:dry-run": "standard-version --dry-run",
-    "test": "web-test-runner \"test/**/*.test.js\" --node-resolve"
+    "test": "web-test-runner \"test/**/*.test.ts\" --node-resolve"
   },
   "repository": {
     "type": "git",
