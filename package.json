@@ -6,6 +6,7 @@
   "author": "Ming-der Wang <mingderwang@gmail.com>",
   "license": "MIT OR ISC",
   "scripts": {
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish --tag alpha --access public",
     "release": "standard-version && git push --follow-tags origin main && npm publish --access public",
     "release:dry-run": "standard-version --dry-run",
@@ -22,16 +23,15 @@
   "keywords": [],
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4-fix.0",
-    "@open-wc/building-rollup": "^2.2.1",
+    "@web/dev-server-esbuild": "^0.3.3",
     "@web/test-runner": "^0.15.0",
-    "deepmerge": "^4.3.0",
-    "rimraf": "^4.1.2",
-    "rollup": "^3.13.0",
+    "concurrently": "^7.6.0",
     "standard-version": "^9.5.0",
     "typescript": "^4.9.5"
   },
   "files": [
     "dist",
     "src"
-  ]
+  ],
+  "type": "module"
 }
