@@ -1,6 +1,6 @@
 {
   "name": "@muzamint/eth10",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Eth10 Protocol",
   "source": "src/index.ts",
   "main": "dist/index.umd.js",
