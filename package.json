@@ -2,14 +2,19 @@
   "name": "@muzamint/eth10",
   "version": "0.0.4",
   "description": "Eth10 Protocol",
-  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.modern.module.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "author": "Ming-der Wang <mingderwang@gmail.com>",
   "license": "MIT OR ISC",
   "bin": {
     "eth10": "src/cli.cjs"
   },
   "scripts": {
-    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
+    "build": "microbundle --jsx React.createElement --define PKG_VERSION=$(npm show . version)",
+    "watch": "microbundle watch --define PKG_VERSION=$(npm show . version)",
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish --tag alpha --access public",
     "release": "standard-version && git push --follow-tags origin main && npm publish --access public",
     "release:dry-run": "standard-version --dry-run",
@@ -31,6 +36,7 @@
     "@web/dev-server-esbuild": "^0.3.3",
     "@web/test-runner": "^0.15.0",
     "concurrently": "^7.6.0",
+    "microbundle": "^0.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
@@ -39,9 +45,9 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "README.md"
   ],
-  "type": "module",
   "dependencies": {
     "yargs": "^17.6.2"
   }
